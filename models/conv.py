@@ -109,7 +109,7 @@ class SIRConv(nn.Module):
     agg_type : str, optional
         Aggregator type to use (``sum``, ``max``, ``mean``, or ``sym``), defaults to ``sum``
     """
-    def __init__(self, input_dim, hidden_dim, output_dim, activation, dropout=0, inner_bias=True, outer_bias=True, agg_type='sum'):
+    def __init__(self, input_dim, hidden_dim, output_dim, activation, dropout=0, inner_bias=True, outer_bias=True, agg_type='sum', **kwargs):
         super(SIRConv, self).__init__()
         self.activation = activation
         self.dropout = nn.Dropout(dropout)
